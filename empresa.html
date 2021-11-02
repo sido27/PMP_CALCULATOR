@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCÚLOS DE EMPRESA</title>
+    <style>
+      #button {
+        display: block;
+        width: 35%;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div">
+      <h1>PMP</h1>
+      <label for="datosFIFO"></label>
+      <textarea
+        id="datosFIFO"
+        rows="10"
+        cols="50"
+        placeholder="1/6,existencia,300,500&#10;4/6,compra,480,480"
+      >
+1/1,existencia,300,20
+4/6,compra,200,25
+8/6,venta,350,0
+15/6,compra,450,30
+22/6,venta,100,0
+</textarea
+      >
+
+      <button id="button">Press me</button>
+    </div>
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="3">Fecha</th>
+          <th rowspan="3">procedencia</th>
+        </tr>
+
+        <tr>
+          <th colspan="3">entrada</th>
+          <th colspan="3">salida</th>
+          <th colspan="3">existencia</th>
+        </tr>
+
+        <tr>
+          <th>cantidad</th>
+          <th>precio</th>
+          <th>valor</th>
+          <th>cantidad</th>
+          <th>precio</th>
+          <th>valor</th>
+          <th>cantidad</th>
+          <th>precio</th>
+          <th>valor</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabla"></tbody>
+    </table>
+  </body>
+
+  <script src="./empresaPMP.js"></script>
+</html>
+<!-- on a "using markup correctly" note, this should not be a form at all,
+     just get rid of those outer <form>...</form> tags. We're not in HTML 3.2 anymore,
+      in modern HTML any input element can be used all on its own =) Furthermore,
+     if you need a clickable button, use <button>,
+ not an input with type button or type submit. -->
